@@ -1,0 +1,74 @@
+###
+GET http://localhost:3000/api/produtos
+
+###
+###
+POST http://localhost:3000/api/produtos
+Content-Type: application/json
+
+{
+  "nome": "Monitor Ultrawide",
+  "descricao": "Monitor LG 29 polegadas",
+  "preco": 1500.00,
+  "estoque": 10
+}
+
+###
+###
+PUT http://localhost:3000/api/produtos/1
+Content-Type: application/json
+
+{
+  "nome": "Monitor Ultrawide Atualizado",
+  "descricao": "Monitor LG 34 polegadas",
+  "preco": 1800.00,
+  "estoque": 15
+}
+
+###
+###
+DELETE http://localhost:3000/api/produtos/1
+
+###
+###
+GET http://localhost:3000/api/clientes
+
+###
+###
+POST http://localhost:3000/api/clientes
+Content-Type: application/json
+
+{
+  "nome": "João Silva",
+  "email": "joao@email.com",
+  "endereco": "Rua Exemplo, 123"
+}
+
+###
+###
+PUT http://localhost:3000/api/clientes/1
+Content-Type: application/json
+
+{
+  "nome": "João Silva Atualizado",
+  "email": "joao.novo@email.com",
+  "endereco": "Rua Nova, 456"
+}
+
+###
+###
+DELETE http://localhost:3000/api/clientes/1
+
+###
+###
+GET http://localhost:3000/api/pedidos
+
+###
+###
+POST http://localhost:3000/api/pedidos
+Content-Type: application/json
+
+{
+  "clienteId": "1",
+  "produtosIds": ["1"]
+}
